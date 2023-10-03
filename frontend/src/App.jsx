@@ -11,7 +11,7 @@ const router = createBrowserRouter(
       errorElement: <Error />,
       children: [
         {
-          index: true, // content thats loded on the index / parent rout 
+          index: true, 
           element: <Landing />,
         },
         {
