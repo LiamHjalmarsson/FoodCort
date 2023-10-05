@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import Logo from "../../components/ui/logo";
-import Input_form from "../../components/ui/input_form";
+import Logo from "../../components/ui/Logo";
+import Input_form from "../../components/ui/Input_form";
 
 const Login = () => {
     return (

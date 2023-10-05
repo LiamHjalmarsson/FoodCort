@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import MainHeader from "./mainHeader";
-import NavLinks from "./navLinks";
-import SideDrawer from "./sideDrawer";
+import MainHeader from "./MainHeader";
+import NavLinks from "./NavLinks";
+import SideDrawer from "./SideDrawer";
 import { useState } from "react";
-import Backdrop from "../ui/backdrop";
+import Backdrop from "../ui/Backdrop";
 
 const MainNavigation = (props) => {
     let [isOpen, setIsOpen] = useState(false)
@@ -27,15 +27,17 @@ const MainNavigation = (props) => {
             </SideDrawer>
 
             <MainHeader>
-                <button className="w-12 h-12 bg-transparent border-none flex flex-col justify-around mr-8 cursor-pointer md:hidden" onClick={openDrawerHandler}>
-                    <span className="span"></span>
-                    <span className="span"></span>
-                    <span className="span"></span>
+                <button className="w-12 h-8 bg-transparent border-none flex flex-col justify-around mr-8 cursor-pointer md:hidden" onClick={openDrawerHandler}>
+                    <span className="block w-12 h-1.5 rounded-md bg-white"></span>
+                    <span className="block w-12 h-1.5 rounded-md bg-white"></span>
+                    <span className="block w-12 h-1.5 rounded-md bg-white"></span>
                 </button>
 
                 <div>
                     <h1 className="text-lg lg:text-xl xl:text-2xl mr-4">
-                        <Link to="/">FoodCourt</Link>
+                        <Link to="/" className="text-xl text-purple-300 font-bold hover:border-b-4 pb-1">
+                            FoodCourt
+                        </Link>
                     </h1>
                 </div>
 

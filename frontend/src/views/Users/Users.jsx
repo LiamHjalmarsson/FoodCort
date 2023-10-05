@@ -1,7 +1,6 @@
 import UsersList from "../../components/user/UsersList";
 
 const Users = () => {
-
     const Users = [
         {
             id: "test",

@@ -7,19 +7,6 @@
     .btn-primary {
         @apply rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-1/4;
     }
-
-    .span {
-        @apply block w-12 h-2.5 bg-white
-    }
-
-    .navlinks__li {
-        @apply m-4 md:mb-2
-    }
-
-    .navlinks__li__a {
-        @apply p-4 md:text-red-500
-    }
-
 }
 
 .slide-in-left-enter {
@@ -29,7 +16,7 @@
 .slide-in-left-enter-active {
     transform: translateX(0);
     opacity: 1;
-    transition: all 200ms;
+    transition: all 300ms ease-in-out;
 }
 
 .slide-in-left-exit {
@@ -40,5 +27,5 @@
 .slide-in-left-exit-active {
     transform: translateX(-100%);
     opacity: 0;
-    transition: all 200ms;
-}
+    transition: all 300ms ease-in-out;
+}   

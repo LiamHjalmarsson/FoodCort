@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"; 
 import {
-  HomeLayout, Landing, Register, Login, DashboardLayout, Error, Users
+  HomeLayout, Landing, Register, Login, DashboardLayout, Error, Users, AllItems, Item
 } from "./views";
 
 const router = createBrowserRouter(
@@ -23,8 +23,18 @@ const router = createBrowserRouter(
           element: <Login />
         },
         {
+          path: "items",
+          element: <AllItems />,
+          children: [
+            {
+              path: "/items/item/:itemId",
+              element: <Item />
+            }
+          ]
+        },
+        {
           path: "users",
-          element: <Users />
+          element: <Users />,
         },
         {
           path: "dashboard",

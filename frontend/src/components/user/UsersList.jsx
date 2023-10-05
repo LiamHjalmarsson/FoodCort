@@ -1,4 +1,4 @@
-import Card from "../ui/card";
+import Card from "../ui/Card";
 import User from "./User";
 
 const UsersList = (props) => {
