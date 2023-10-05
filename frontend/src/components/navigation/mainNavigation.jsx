@@ -8,20 +8,26 @@ import Backdrop from "../ui/backdrop";
 const MainNavigation = (props) => {
     let [isOpen, setIsOpen] = useState(false)
 
-    let handleDrawer = () => {
-        setIsOpen(!isOpen);
+    let openDrawerHandler = () => {
+        setIsOpen(true);
     }
     
+    let closeDrawerHandler = () => {
+        setIsOpen(false);
+    }
+
     return (
         <>
-            {isOpen && <Backdrop onClick={handleDrawer} />}
-            {isOpen && <SideDrawer>
+            {isOpen && <Backdrop onClick={closeDrawerHandler} />}
+
+            <SideDrawer show={isOpen} onClick={closeDrawerHandler}>
                 <nav className="h-full">
                     <NavLinks />
                 </nav>
-            </SideDrawer>}
+            </SideDrawer>
+
             <MainHeader>
-                <button className="w-12 h-12 bg-transparent border-none flex flex-col justify-around mr-8 cursor-pointer md:hidden" onClick={handleDrawer}>
+                <button className="w-12 h-12 bg-transparent border-none flex flex-col justify-around mr-8 cursor-pointer md:hidden" onClick={openDrawerHandler}>
                     <span className="span"></span>
                     <span className="span"></span>
                     <span className="span"></span>

@@ -4,7 +4,6 @@
 
 
 @layer components {
-    /* Primary Button */
     .btn-primary {
         @apply rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-1/4;
     }
@@ -20,4 +19,26 @@
     .navlinks__li__a {
         @apply p-4 md:text-red-500
     }
+
+}
+
+.slide-in-left-enter {
+    transform: translateX(-100%);
+}
+
+.slide-in-left-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 200ms;
+}
+
+.slide-in-left-exit {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.slide-in-left-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 200ms;
 }
