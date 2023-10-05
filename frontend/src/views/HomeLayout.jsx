@@ -1,50 +1,19 @@
 import { Link, Outlet } from "react-router-dom";
+import MainNavigation from "../components/navigation/mainNavigation";
 
-
-const navigations = [
-    {
-        name: "Home",
-        to: "/"
-    },
-    {
-        name: "Dashboard",
-        to: "/dashboard"
-    },
-]
 const HomeLayout = () => {
     return (
         <>
-            <nav className="flex items-center justify-between p-6 lg:px-8 gap-8 bg-slate-500 text-white">
-                <div>
-                    <h1 className="text-lg">
-                        FoodCourt
-                    </h1>
-                </div>
-                <ul className="flex flex-grow justify-start gap-4">
-                    {
-                        navigations.map((path) => (
-                            <li key={path.name}>
-                                <Link to={path.to} className="text-sm font-semibold leading-6 text-white">
-                                    {path.name}
-                                </Link>
-                            </li>
-                        ))
-                    }
-                </ul>
-                <div>
-                    <Link to="/login">
-                        Log in
-                    </Link>
-                </div>
-            </nav>
 
-            <main>
+            <MainNavigation />
+
+            <main className="mt-4">
                 <Outlet />
             </main>
 
-            <footer className="text-center p-4 bg-slate-400">
+            <footer className="absolute mt-4 bottom-0 w-full p-3 lg:p-5 text-center bg-slate-600 text-white">
                 <div>
-                    Copywrite 
+                    Copywrite
                 </div>
                 <div>
                     Contact

@@ -3,6 +3,21 @@
 @tailwind utilities;
 
 
+@layer components {
+    /* Primary Button */
+    .btn-primary {
+        @apply rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-1/4;
+    }
 
-.primary-btn {
+    .span {
+        @apply block w-12 h-2.5 bg-white
+    }
+
+    .navlinks__li {
+        @apply m-4 md:mb-2
+    }
+
+    .navlinks__li__a {
+        @apply p-4 md:text-red-500
+    }
 }
