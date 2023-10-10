@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"; 
 import {
-  HomeLayout, Landing, Register, Login, DashboardLayout, Error, Users, AllItems, Item
+  HomeLayout, Landing, Error, Users, UserPlaces, NewPlace, User
 } from "./views";
 
 const router = createBrowserRouter(
@@ -8,40 +8,22 @@ const router = createBrowserRouter(
     {
       path: "/",
       element: <HomeLayout />,
-      errorElement: <Error />,
+      // errorElement: <Error />,
       children: [
         {
           index: true, 
           element: <Landing />,
         },
         {
-          path: "register",
-          element: <Register />
-        },
-        {
-          path: "login",
-          element: <Login />
-        },
-        {
-          path: "items",
-          element: <AllItems />,
-          children: [
-            {
-              path: "/items/item/:itemId",
-              element: <Item />
-            }
-          ]
-        },
-        {
           path: "users",
-          element: <Users />,
-        },
-        {
-          path: "dashboard",
-          element: <DashboardLayout />,
           children: [
             {
-
+              index: true, 
+              element: <Users />,
+            },
+            {
+              path: ":userid",
+              element: <User />,
             }
           ]
         },

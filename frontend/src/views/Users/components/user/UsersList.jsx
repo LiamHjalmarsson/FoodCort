@@ -1,4 +1,4 @@
-import Card from "../ui/Card";
+import Card from "../../../../components/ui/Card";
 import User from "./User";
 
 const UsersList = (props) => {
@@ -16,7 +16,7 @@ const UsersList = (props) => {
 
     return (
         <>
-            <ul className="list-none mx-auto p-0 w-90 max-w-5xl flex justify-center flex-wrap flex-col items-center">
+            <ul className="w-full h-full flex justify-center items-center flex-col">
                 {
                     props.users.map((user) => {
                         return <User key={user.id} user={user}/>

@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@layer components {
-    .btn-primary {
-        @apply rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-1/4;
-    }
-}
-
 .slide-in-left-enter {
     transform: translateX(-100%);
 }
@@ -29,3 +22,16 @@
     opacity: 0;
     transition: all 300ms ease-in-out;
 }   
+
+
+.cross-animate .line1 {
+    transform: translateY(5px) rotate(45deg);
+  }
+  
+  .cross-animate .line2 {
+    opacity: 0;
+  }
+  
+  .cross-animate .line3 {
+    transform: translateY(-5px) rotate(-45deg);
+  }
